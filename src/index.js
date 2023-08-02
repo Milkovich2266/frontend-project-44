@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
 // Общее приветствие
@@ -21,7 +20,7 @@ const quetionDataGeneration = (expression, result) => {
   while (i < 3) {
     console.log(`'Question:' ${expression}`);
     const yourAnswer = readlineSync.question('Your answer: ');
-    if (yourAnswer === result) {
+    if (yourAnswer === String(result)) {
       console.log('Correct!');
       i += 1;
     } else {
@@ -29,8 +28,8 @@ const quetionDataGeneration = (expression, result) => {
         `${yourAnswer} is wrong answer ;(. Correct answer was ${result}. Let's try again, ${name}!`
       );
     }
-    console.log(`Congratulations, ${name}!`);
   }
+  console.log(`Congratulations, ${name}!`);
 };
 
-export default { welkom, printQuestionAboutTheGame, quetionDataGeneration };
+export { welkom, printQuestionAboutTheGame, quetionDataGeneration };
