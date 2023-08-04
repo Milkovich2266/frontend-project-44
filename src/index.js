@@ -15,17 +15,19 @@ const printQuestionAboutTheGame = (questionGame) => {
 
 // Главный цикл в игре
 // eslint-disable-next-line consistent-return
-const quetionDataGeneration = (expression, result) => {
+const quetionDataGeneration = (generateExpression, questionAndResult) => {
   let i = 0;
   while (i < 3) {
-    console.log(`'Question:' ${expression}`);
+    generateExpression();
+    console.log(`'Question:' ${questionAndResult[0]}`);
     const yourAnswer = readlineSync.question('Your answer: ');
-    if (yourAnswer === String(result)) {
+    if (yourAnswer === String(questionAndResult[1])) {
       console.log('Correct!');
       i += 1;
     } else {
       return console.log(
-        `${yourAnswer} is wrong answer ;(. Correct answer was ${result}. Let's try again, ${name}!`
+        `${yourAnswer} is wrong answer ;(. Correct answer was ${questionAndResult[1]}. 
+Let's try again, ${name}!`
       );
     }
   }

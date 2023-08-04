@@ -7,17 +7,19 @@ import {
 const startBrainCalc = () => {
   welkom();
 
-  const question = 'What is the result of the expression?';
-  printQuestionAboutTheGame(question);
-
-  const mathOperation = ['+', '-', '*'];
-  const firstNumber = Math.floor(Math.random() * 100);
-  const secondNumber = Math.floor(Math.random() * 100);
-  const randomMathOperation = mathOperation[Math.floor(Math.random(0, 2) * 3)];
-  const expression = `${firstNumber} ${randomMathOperation} ${secondNumber}`;
+  const basicQuestion = 'What is the result of the expression?';
+  printQuestionAboutTheGame(basicQuestion);
 
   let result;
-  const answer = () => {
+  const questionAndResult = [];
+  const generateExpression = () => {
+    const mathOperation = ['+', '-', '*'];
+    const firstNumber = Math.floor(Math.random() * 100);
+    const secondNumber = Math.floor(Math.random() * 100);
+    const randomMathOperation =
+      mathOperation[Math.floor(Math.random(0, 2) * 3)];
+    const expression = `${firstNumber} ${randomMathOperation} ${secondNumber}`;
+
     switch (randomMathOperation) {
       case '+':
         result = firstNumber + secondNumber;
@@ -29,10 +31,13 @@ const startBrainCalc = () => {
         result = firstNumber * secondNumber;
         break;
     }
+    questionAndResult[0] = expression;
+    questionAndResult[1] = result;
+    return questionAndResult;
   };
-  answer(randomMathOperation);
+  generateExpression();
 
-  quetionDataGeneration(expression, result);
+  quetionDataGeneration(generateExpression, questionAndResult);
 };
 
 export default startBrainCalc;
