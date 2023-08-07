@@ -35,9 +35,8 @@ const startBrainCalc = () => {
     questionAndResult[1] = result;
     return questionAndResult;
   };
-  generateExpression();
 
-  quetionDataGeneration(generateExpression, questionAndResult);
+  quetionDataGeneration(generateExpression);
 };
 
 export default startBrainCalc;
