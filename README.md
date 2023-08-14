@@ -8,5 +8,5 @@ Game example "Brain-calc":
 <a href="https://asciinema.org/a/Jq9yhQv7Cg64JLBPNxFFUn9wJ" target="_blank"><img src="https://asciinema.org/a/Jq9yhQv7Cg64JLBPNxFFUn9wJ.svg" /></a>
 Game example "Brain-GCD":
 <a href="https://asciinema.org/a/UbiPGlySLXSTc1vSN2dNMa0qY" target="_blank"><img src="https://asciinema.org/a/UbiPGlySLXSTc1vSN2dNMa0qY.svg" /></a>
-Game example :Brain-Progression"
+Game example "Brain-Progression"
 <a href="https://asciinema.org/a/WeftNey8zc1VBDm4nLDeBlk3h" target="_blank"><img src="https://asciinema.org/a/WeftNey8zc1VBDm4nLDeBlk3h.svg" /></a>
