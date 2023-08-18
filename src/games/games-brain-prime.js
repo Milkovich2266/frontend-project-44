@@ -14,13 +14,11 @@ const startBrainPrime = () => {
   const generateData = () => {
     const questionAndResult = [];
     const randomNum = Math.floor(Math.random() * 1000);
-    let count = 1;
     let result = 'yes';
     let i = 1;
     while (i < randomNum - 1) {
       i += 1;
       if (randomNum % i === 0) {
-        count += 1;
         result = 'no';
         break;
       }
