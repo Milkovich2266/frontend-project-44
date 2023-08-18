@@ -25,10 +25,8 @@ const quetionDataGeneration = (generateExpression) => {
       console.log('Correct!');
       i += 1;
     } else {
-      return console.log(
-        `'${yourAnswer}' is wrong answer ;(. Correct answer was '${answer}'. 
-Let's try again, ${name}!`
-      );
+      return console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${answer}'. 
+Let's try again, ${name}!`);
     }
   }
   console.log(`Congratulations, ${name}!`);
