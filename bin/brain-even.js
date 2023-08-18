@@ -27,11 +27,13 @@ const getEvenNumber = () => {
       i += 1;
     } else if (yourAnswer === 'yes') {
       return console.log(
-        `'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${name}`
+        `'yes' is wrong answer ;(. Correct answer was 'no'. 
+Let's try again, ${name}`
       );
     } else if (yourAnswer === 'no') {
       return console.log(
-        `'no' is wrong answer ;(. Correct answer was 'yes'. Let's try again, ${name}`
+        `'no' is wrong answer ;(. Correct answer was 'yes'. 
+  Let's try again, ${name}`
       );
     } else {
       return console.log(`'${yourAnswer}' is wrong answer ;(.`);
