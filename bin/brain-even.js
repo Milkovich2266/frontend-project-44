@@ -28,20 +28,12 @@ const getEvenNumber = () => {
     } else if (yourAnswer === 'yes') {
       return console.log(
         `'yes' is wrong answer ;(. Correct answer was 'no'. 
-<<<<<<< HEAD
 Let's try again, ${name}!`
-=======
-Let's try again, ${name}`
->>>>>>> 2d5c713e803aefea3c93bfc2dd6b6b5c0ed98648
       );
     } else if (yourAnswer === 'no') {
       return console.log(
         `'no' is wrong answer ;(. Correct answer was 'yes'. 
-<<<<<<< HEAD
   Let's try again, ${name}!`
-=======
-  Let's try again, ${name}`
->>>>>>> 2d5c713e803aefea3c93bfc2dd6b6b5c0ed98648
       );
     } else {
       return console.log(`'${yourAnswer}' is wrong answer ;(.`);
