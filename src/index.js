@@ -19,7 +19,7 @@ const quetionDataGeneration = (generateExpression) => {
   let i = 0;
   while (i < 3) {
     const [question, answer] = generateExpression();
-    console.log(`'Question:' ${question}`);
+    console.log(`Question: ${question}`);
     const yourAnswer = readlineSync.question('Your answer: ');
     if (yourAnswer === String(answer)) {
       console.log('Correct!');
