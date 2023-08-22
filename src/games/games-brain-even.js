@@ -39,7 +39,6 @@ Let's try again, ${name}!`,
     }
     console.log(`Congratulations, ${name}!`);
   };
-
   getEvenNumber();
 };
 

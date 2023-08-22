@@ -6,10 +6,8 @@ import {
 
 const startBrainGCD = () => {
   welkom();
-
   const basicQuestionGCD = 'Find the greatest common divisor of given numbers.';
   printQuestionAboutTheGame(basicQuestionGCD);
-
   const questionAndResult = [];
   const generateGames = () => {
     const firstNumber = Math.floor(Math.random() * 100);

@@ -6,10 +6,8 @@ import {
 
 const startBrainCalc = () => {
   welkom();
-
   const basicQuestion = 'What is the result of the expression?';
   printQuestionAboutTheGame(basicQuestion);
-
   let result;
   const questionAndResult = [];
   const generateExpression = () => {
@@ -34,7 +32,6 @@ const startBrainCalc = () => {
     questionAndResult[1] = result;
     return questionAndResult;
   };
-
   quetionDataGeneration(generateExpression);
 };
 
