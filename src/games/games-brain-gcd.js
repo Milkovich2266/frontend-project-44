@@ -18,7 +18,7 @@ const startBrainGCD = () => {
     const minNum = Math.min(firstNumber, secondNumber);
     const maxNum = Math.max(firstNumber, secondNumber);
     let result = minNum;
-    if (maxNum % minNum !== 0) {
+    if (maxNum !== 0 && minNum !== 0) {
       let remainder = maxNum % minNum;
       let minForCycle = minNum;
       while (remainder !== 0) {
@@ -26,6 +26,8 @@ const startBrainGCD = () => {
         remainder = minForCycle % remainder;
         minForCycle = result;
       }
+    } else {
+      result = minNum + maxNum;
     }
     questionAndResult[0] = expression;
     questionAndResult[1] = result;
