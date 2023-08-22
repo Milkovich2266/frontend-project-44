@@ -7,8 +7,7 @@ import {
 const startBrainPrime = () => {
   welkom();
 
-  const basicQuestion =
-    'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const basicQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   printQuestionAboutTheGame(basicQuestion);
 
   const generateData = () => {
