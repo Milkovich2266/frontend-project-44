@@ -6,7 +6,11 @@
 
 ![Logo_Brain_games](https://github.com/Milkovich2266/frontend-project-44/assets/123631186/602fbde8-0ec9-4511-a19b-d060aae69e73)
 
-<h2>This project contains 5 logic games. The presented games will help develop mindfulness and ingenuity.</h2>
+## This project contains 5 logic games. The presented games will help develop mindfulness and ingenuity.
+### Installation 
+1. <a href="https://github.com/Hexlet/ru-instructions/blob/main/nodejs.md">Install Node.js</a>
+2. Clone the project repository locally.
+3. Run the executable file "Game Name". Example: Brain-even.
 
 Game example "Brain-even":
 <a href="https://asciinema.org/a/uvTHCzOn1foWeNQ99EduDFjjt" target="_blank"><img src="https://asciinema.org/a/uvTHCzOn1foWeNQ99EduDFjjt.svg" /></a>
