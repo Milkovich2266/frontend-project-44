@@ -7,6 +7,8 @@
 ![Logo_Brain_games](https://github.com/Milkovich2266/frontend-project-44/assets/123631186/602fbde8-0ec9-4511-a19b-d060aae69e73)
 
 ## This project contains 5 logic games. The presented games will help develop mindfulness and ingenuity.
+### Minimum requirements:
+Node.js v20.2.0.
 ### Installation 
 1. <a href="https://github.com/Hexlet/ru-instructions/blob/main/nodejs.md">Install Node.js</a>
 2. Clone the project repository locally.
