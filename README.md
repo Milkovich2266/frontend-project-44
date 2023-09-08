@@ -12,13 +12,14 @@
 2. Clone the project repository locally.
 3. Run the executable file "Game Name". Example: Brain-even.
 
-Game example "Brain-even":
+### Game example 
+"Brain-even":
 <a href="https://asciinema.org/a/uvTHCzOn1foWeNQ99EduDFjjt" target="_blank"><img src="https://asciinema.org/a/uvTHCzOn1foWeNQ99EduDFjjt.svg" /></a>
-Game example "Brain-calc":
+"Brain-calc":
 <a href="https://asciinema.org/a/Jq9yhQv7Cg64JLBPNxFFUn9wJ" target="_blank"><img src="https://asciinema.org/a/Jq9yhQv7Cg64JLBPNxFFUn9wJ.svg" /></a>
-Game example "Brain-GCD":
+"Brain-GCD":
 <a href="https://asciinema.org/a/UbiPGlySLXSTc1vSN2dNMa0qY" target="_blank"><img src="https://asciinema.org/a/UbiPGlySLXSTc1vSN2dNMa0qY.svg" /></a>
-Game example "Brain-Progression":
+"Brain-Progression":
 <a href="https://asciinema.org/a/WeftNey8zc1VBDm4nLDeBlk3h" target="_blank"><img src="https://asciinema.org/a/WeftNey8zc1VBDm4nLDeBlk3h.svg" /></a>
-Game example "Brain-Prime":
+"Brain-Prime":
 <a href="https://asciinema.org/a/oe3uSI8LK3VlcYIe3Yx0awoi3" target="_blank"><img src="https://asciinema.org/a/oe3uSI8LK3VlcYIe3Yx0awoi3.svg" /></a>
