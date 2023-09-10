@@ -1,17 +1,10 @@
-import {
-  welkom,
-  printQuestionAboutTheGame,
-  quetionDataGeneration,
-} from '../index.js';
+import questionDataGeneration from '../index.js';
+import { randomNumbers } from '../utils.js';
 
 const startBrainGCD = () => {
-  welkom();
-  const basicQuestionGCD = 'Find the greatest common divisor of given numbers.';
-  printQuestionAboutTheGame(basicQuestionGCD);
-  const questionAndResult = [];
+  const basicQuestion = 'Find the greatest common divisor of given numbers.';
   const generateGames = () => {
-    const firstNumber = Math.floor(Math.random() * 100);
-    const secondNumber = Math.floor(Math.random() * 100);
+    const [firstNumber, secondNumber] = randomNumbers();
     const expression = `${firstNumber} ${secondNumber}`;
     const minNum = Math.min(firstNumber, secondNumber);
     const maxNum = Math.max(firstNumber, secondNumber);
@@ -27,11 +20,9 @@ const startBrainGCD = () => {
     } else {
       result = minNum + maxNum;
     }
-    questionAndResult[0] = expression;
-    questionAndResult[1] = result;
-    return questionAndResult;
+    return [expression, result];
   };
-  quetionDataGeneration(generateGames);
+  questionDataGeneration(generateGames, basicQuestion);
 };
 
 export default startBrainGCD;

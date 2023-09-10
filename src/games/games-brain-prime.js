@@ -1,32 +1,21 @@
-import {
-  welkom,
-  printQuestionAboutTheGame,
-  quetionDataGeneration,
-} from '../index.js';
+import questionDataGeneration from '../index.js';
+import { randomNumThousand } from '../utils.js';
 
 const startBrainPrime = () => {
-  welkom();
-
   const basicQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  printQuestionAboutTheGame(basicQuestion);
 
   const generateData = () => {
-    const questionAndResult = [];
-    const randomNum = Math.floor(Math.random() * 1000);
+    const [randomNum] = randomNumThousand();
     let result = 'yes';
-    let i = 1;
-    while (i < randomNum - 1) {
-      i += 1;
+    for (let i = 1; i < randomNum - 1; i++) {
       if (randomNum % i === 0) {
         result = 'no';
         break;
       }
     }
-    questionAndResult[0] = randomNum;
-    questionAndResult[1] = result;
-    return questionAndResult;
+    return [randomNum, result];
   };
-  quetionDataGeneration(generateData);
+  questionDataGeneration(generateData, basicQuestion);
 };
 
 export default startBrainPrime;

@@ -1,19 +1,12 @@
-import {
-  welkom,
-  printQuestionAboutTheGame,
-  quetionDataGeneration,
-} from '../index.js';
+import questionDataGeneration from '../index.js';
+import { randomNumbers } from '../utils.js';
 
 const startBrainCalc = () => {
-  welkom();
   const basicQuestion = 'What is the result of the expression?';
-  printQuestionAboutTheGame(basicQuestion);
   let result;
-  const questionAndResult = [];
   const generateExpression = () => {
     const mathOperation = ['+', '-', '*'];
-    const firstNumber = Math.floor(Math.random() * 100);
-    const secondNumber = Math.floor(Math.random() * 100);
+    const [firstNumber, secondNumber] = randomNumbers();
     const randomMathOperation = mathOperation[Math.floor(Math.random(0, 2) * 3)];
     const expression = `${firstNumber} ${randomMathOperation} ${secondNumber}`;
 
@@ -28,11 +21,10 @@ const startBrainCalc = () => {
         result = firstNumber * secondNumber;
         break;
     }
-    questionAndResult[0] = expression;
-    questionAndResult[1] = result;
-    return questionAndResult;
+
+    return [expression, result];
   };
-  quetionDataGeneration(generateExpression);
+  questionDataGeneration(generateExpression, basicQuestion);
 };
 
 export default startBrainCalc;

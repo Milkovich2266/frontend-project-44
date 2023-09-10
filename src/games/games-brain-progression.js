@@ -1,38 +1,26 @@
-import {
-  welkom,
-  printQuestionAboutTheGame,
-  quetionDataGeneration,
-  // eslint-disable-next-line import/no-unresolved
-} from '../index.js';
+import questionDataGeneration from '../index.js';
+import { randomNumbers, randomThens } from '../utils.js';
 
 const startBrainProgressiom = () => {
-  welkom();
-
-  const basicQuestionProgression = 'What number is missing in the progression?';
-  printQuestionAboutTheGame(basicQuestionProgression);
-
+  const basicQuestion = 'What number is missing in the progression?';
   const generateGamesBrainProgression = () => {
-    const questionAndResult = [];
     let expression = [];
-    let randomNum = Math.floor(Math.random() * 100);
-    const stepProgression = Math.floor(Math.random() * 10);
+    let [, randomNum] = randomNumbers();
+    const [stepProgression] = randomThens();
 
     while (expression.length < 10) {
       expression.push(randomNum);
       randomNum += stepProgression;
     }
-
-    const indexHiddenNum = Math.floor(Math.random() * 10);
+    const [indexHiddenNum] = randomThens();
     const hiddenNum = '..';
     const result = expression[indexHiddenNum];
     expression[indexHiddenNum] = hiddenNum;
     expression = expression.join(' ');
 
-    questionAndResult[0] = expression;
-    questionAndResult[1] = result;
-    return questionAndResult;
+    return [expression, result];
   };
-  quetionDataGeneration(generateGamesBrainProgression);
+  questionDataGeneration(generateGamesBrainProgression, basicQuestion);
 };
 
 export default startBrainProgressiom;
