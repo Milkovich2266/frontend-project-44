@@ -7,7 +7,9 @@ const startBrainPrime = () => {
   const generateData = () => {
     const [randomNum] = randomNumThousand();
     let result = 'yes';
-    for (let i = 1; i < randomNum - 1; i++) {
+    let i = 1;
+    while (i < randomNum - 1) {
+      i += 1;
       if (randomNum % i === 0) {
         result = 'no';
         break;
