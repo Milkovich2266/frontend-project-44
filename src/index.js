@@ -10,7 +10,7 @@ const questionDataGeneration = (generateExpression, basicQuestion) => {
   console.log(basicQuestion);
 
   const numberOfRounds = 3;
-  for (let i = 0; i < numberOfRounds; i++) {
+  for (let i = 0; i < numberOfRounds; i += 1) {
     const [question, answer] = generateExpression();
     console.log(`Question: ${question}`);
     const yourAnswer = readlineSync.question('Your answer: ');
