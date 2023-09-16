@@ -8,7 +8,7 @@ const getResultAndExpression = () => {
   const mathOperation = ['+', '-', '*'];
   const firstNumber = getRandomNumbers(0, 100);
   const secondNumber = getRandomNumbers(0, 100);
-  const indexForMathOperation = getRandomNumbers(0, mathOperation.length);
+  const indexForMathOperation = getRandomNumbers(0, mathOperation.length - 1);
   const randomMathOperation = mathOperation[indexForMathOperation];
   const expression = `${firstNumber} ${randomMathOperation} ${secondNumber}`;
   switch (randomMathOperation) {
