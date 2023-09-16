@@ -1,26 +1,29 @@
-import questionDataGeneration from '../index.js';
-import { randomNumbers, randomThens } from '../utils.js';
+import runGeneralLogic from '../index.js';
+import getRandomNumbers from '../utils.js';
+
+const basicQuestion = 'What number is missing in the progression?';
+
+const generateGamesBrainProgression = () => {
+  let expression = [];
+  let randomNum = getRandomNumbers(0, 100);
+  const stepProgression = getRandomNumbers(0, 10);
+  const quanityNumbersInProgression = 10;
+  while (expression.length < quanityNumbersInProgression) {
+    expression.push(randomNum);
+    randomNum += stepProgression;
+  }
+  const indexHiddenNum = getRandomNumbers(0, quanityNumbersInProgression - 1);
+  const hiddenNum = '..';
+  const result = expression[indexHiddenNum];
+  expression[indexHiddenNum] = hiddenNum;
+  expression = expression.join(' ');
+
+  return [expression, String(result)];
+};
 
 const startBrainProgressiom = () => {
-  const basicQuestion = 'What number is missing in the progression?';
-  const generateGamesBrainProgression = () => {
-    let expression = [];
-    let [, randomNum] = randomNumbers();
-    const [stepProgression] = randomThens();
-
-    while (expression.length < 10) {
-      expression.push(randomNum);
-      randomNum += stepProgression;
-    }
-    const [indexHiddenNum] = randomThens();
-    const hiddenNum = '..';
-    const result = expression[indexHiddenNum];
-    expression[indexHiddenNum] = hiddenNum;
-    expression = expression.join(' ');
-
-    return [expression, result];
-  };
-  questionDataGeneration(generateGamesBrainProgression, basicQuestion);
+  generateGamesBrainProgression();
+  runGeneralLogic(generateGamesBrainProgression, basicQuestion);
 };
 
 export default startBrainProgressiom;
