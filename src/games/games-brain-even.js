@@ -3,19 +3,15 @@ import getRandomNumbers from '../utils.js';
 
 const question = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+const isEven = (randomNumber) => randomNumber % 2 === 0;
+
 const getDataGame = () => {
-  let result;
   const randomNumber = getRandomNumbers(0, 100);
-  if (randomNumber % 2 === 0) {
-    result = 'yes';
-  } else {
-    result = 'no';
-  }
+  const result = isEven(randomNumber) ? 'yes' : 'no';
   return [randomNumber, result];
 };
 
 const startBrainEven = () => {
-  getDataGame();
   runGeneralLogic(getDataGame, question);
 };
 

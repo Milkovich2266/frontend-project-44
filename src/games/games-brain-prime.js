@@ -3,23 +3,25 @@ import getRandomNumbers from '../utils.js';
 
 const basicQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const generateData = () => {
-  const randomNum = getRandomNumbers(0, 1000);
+const generateData = (randomNum) => {
   let result = 'yes';
-  let i = 1;
-  while (i < randomNum - 1) {
-    i += 1;
+  for (let i = 2; i < randomNum; i++) {
     if (randomNum % i === 0) {
       result = 'no';
       break;
     }
   }
+  return result;
+};
+
+const getDataGame = () => {
+  const randomNum = getRandomNumbers(0, 1000);
+  const result = generateData(randomNum);
   return [randomNum, result];
 };
 
 const startBrainPrime = () => {
-  generateData();
-  runGeneralLogic(generateData, basicQuestion);
+  runGeneralLogic(getDataGame, basicQuestion);
 };
 
 export default startBrainPrime;
