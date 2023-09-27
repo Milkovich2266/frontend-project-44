@@ -5,6 +5,7 @@ const basicQuestion = 'Answer "yes" if given number is prime. Otherwise answer "
 
 const generateData = (randomNum) => {
   let result = 'yes';
+  // eslint-disable-next-line no-plusplus
   for (let i = 2; i < randomNum; i++) {
     if (randomNum % i === 0) {
       result = 'no';
