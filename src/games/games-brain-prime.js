@@ -3,26 +3,27 @@ import getRandomNumbers from '../utils.js';
 
 const basicQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const generateData = (randomNum) => {
-  let result = 'yes';
+const isPrime = (randomNum) => {
+  if (randomNum < 2) {
+    return false;
+  }
   // eslint-disable-next-line no-plusplus
-  for (let i = 2; i < randomNum; i++) {
+  for (let i = 2; i < Math.sqrt(randomNum); i++) {
     if (randomNum % i === 0) {
-      result = 'no';
-      break;
+      return false;
     }
   }
-  return result;
+  return true;
 };
 
-const getDataGame = () => {
+const getGameData = () => {
   const randomNum = getRandomNumbers(0, 1000);
-  const result = generateData(randomNum);
+  const result = isPrime(randomNum) ? 'yes' : 'no';
   return [randomNum, result];
 };
 
 const startBrainPrime = () => {
-  runGeneralLogic(getDataGame, basicQuestion);
+  runGeneralLogic(getGameData, basicQuestion);
 };
 
 export default startBrainPrime;
