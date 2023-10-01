@@ -3,7 +3,7 @@ import getRandomNumbers from '../utils.js';
 
 const basicQuestion = 'Find the greatest common divisor of given numbers.';
 
-const generateGames = (minNum, maxNum) => {
+const getGcd = (minNum, maxNum) => {
   let result = minNum;
   if (maxNum !== 0 && minNum !== 0) {
     let remainder = maxNum % minNum;
@@ -19,18 +19,18 @@ const generateGames = (minNum, maxNum) => {
   return result;
 };
 
-const getDate = () => {
+const getGameData = () => {
   const firstNumber = getRandomNumbers(0, 100);
   const secondNumber = getRandomNumbers(0, 100);
   const expression = `${firstNumber} ${secondNumber}`;
   const minNum = Math.min(firstNumber, secondNumber);
   const maxNum = Math.max(firstNumber, secondNumber);
-  const result = generateGames(minNum, maxNum);
+  const result = getGcd(minNum, maxNum);
   return [expression, String(result)];
 };
 
 const startBrainGCD = () => {
-  runGeneralLogic(getDate, basicQuestion);
+  runGeneralLogic(getGameData, basicQuestion);
 };
 
 export default startBrainGCD;
